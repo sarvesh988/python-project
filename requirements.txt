@@ -1,0 +1,22 @@
+Flask==2.0.2
+twilio==6.60.0
+googlesearch-python==1.1.0
+flask-socketio==5.2.0
+APScheduler==3.8.1
+boto3==1.18.69
+opencv-python-headless==4.5.3.56
+numpy==1.21.2
+Pillow==8.3.2
+pywhatkit==4.1
+pyautogui==0.9.52
+pyttsx3==2.90
+SpeechRecognition==3.8.1
+dlib==19.22.0
+Werkzeug==2.0.2
+python-dotenv==0.19.1
+sqlalchemy==1.4.25
+getpass==0.0.6
+
+
+---------------------------------------------------------------------
+pip install -r requirements.txt

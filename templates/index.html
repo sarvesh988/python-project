@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Service Platform</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <style>
+
+    </style>
+</head>
+
+<body onload="showAllProjects()">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="signature">
+                <span class="angle">&lt;</span>
+                <span id="logo-name">Sarvesh Sharma</span>
+                <span class="angle">/&gt;</span>
+            </div>
+            <button id="toggle" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation" class="navbar-toggler" data-toggle="collapse"
+                data-target="#navbarSupportedContent" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./portfolio.html">My Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/static/images/Resume-Sachin-Choudhary.pdf">Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex flex-column overflow-auto h-100 w-100 py-4">
+        <!-- -------------------------Buttons------------------------- -->
+    <div class="container-fluid">
+        <h2 class="text-center">Multi-Service Platform</h2>
+        <div id="ContainerBtn" class="container-fluid">
+            <button type="button" class="btn btn-primary" id="allBtn">All</button>
+            <button id="PythonBtn" type="button" class="btn btn-primary">Python</button>
+            <button id="OpenCv2" type="button" class="btn btn-primary">Open Cv2</button>
+            <button id="AWSService" type="button" class="btn btn-primary">AWS Services </button>
+            <a href="http://13.234.20.36/index1.html"><button  type="button" class="btn btn-primary">Docker Automation</button></a>
+            <button id="otherTasksBtn" type="button" class="btn btn-primary">Other Tasks</button>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+
+        <div class="row">
+            <!-- ------------------------Call Someone------------------------- -->
+            <div id="CallSomeone" class="col-md-3 mx-4 section-content" style="width: 25rem;">
+
+                <div class="card" style="width: 100%">
+                    <img src="/static/images/call.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Call someone</h5>
+                        <p class="card-text">Using Python and services like Twilio, you can easily place a call by integrating their API into your code. This allows for straightforward handling of call initiation and management directly from your application.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#callModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- -----------------------------sms------------------------- -->
+            <div id="SMS" class="col-md-3 mx-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/sendmessage.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sms on mobile</h5>
+                        <p class="card-text"> With Python, you can send an SMS by leveraging services like Twilio's API. This integration allows you to easily dispatch text messages from your application, automating communication effortlessly.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#SmsModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- -----------------------------googlequery------------------------- -->
+            <div id="googlequery" class="col-md-3 mx-4 section-content">
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/googlequery.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Google Top 5 Query</h5>
+                        <p class="card-text">You can use Python to retrieve the top 5 Google search results for a given query by using web scraping techniques or APIs. This approach lets you gather and display the most relevant links .</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#GoogleTop5Modal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- --------------------------------searchbing------------------------- -->
+            <div id="SearchBing" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/searchbing.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bing Search</h5>
+                        <p class="card-text">With Python, you can fetch the top 5 Bing search results for a query using the Bing Search API. This allows you to integrate and display the most relevant search results on your site.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#BingModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------------------------------------searchgoogle------------------------- -->
+            <div id="SearchGoogle" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/google.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Google Search</h5>
+                        <p class="card-text">For Google search via a text field, you can enter your query into a search box on Google's homepage and view the results directly on their site. The search engine will display a list of relevant results.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#SearchGoogleModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ------------------------------------capturephoto------------------------- -->
+            <div id="CapturePhoto" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/photocapture.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Capture photo by ip camera address</h5>
+                        <p class="card-text">Capture images with Python by interfacing with your webcam through a script. This allows you to take photos programmatically and save them locally. You can then use these images for various applications.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#CapturePhotoModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- -------------------------------------mailcard------------------------- -->
+            <div id="mailcard" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/email.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Email</h5>
+                        <p class="card-text">To send emails using Python, the smtplib library is commonly used. It's part of Python's standard library and allows you to send emails via an SMTP server.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#EmailModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+ <!-- -------------------------------------ec2------------------------- -->
+            <div id="EC2" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/ec2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ec2 Instance Create</h5>
+                        <p class="card-text"> To create EC2 instances using Python, you can use the boto3 library, which is the AWS SDK for Python. It provides a straightforward way to interact with AWS services. </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ec2Modal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+               <!-- ------------------------------ec2opencv2-------------------------  -->
+            <div id="ec2opencv2" class="col-md-3 my-4  section-content " style="float: left;">
+                <div class="card">
+                    <img src="/static/images/ec2opencv2.jpg" class="card-img-top" alt="Bing">
+                    <div class="card-body">
+                        <h4 class="card-title">EC2 Instance by opencv2</h4>
+                        <p class="card-text"> You use Python's boto3 library to manage AWS resources
+                            Use Python's boto3 library to launch EC2 instances based on detected fingers.</p>
+                        <button class="btn btn-primary" type="button" id="startButton">Start Hand Detection</button>
+                        <p id="status"></p>
+                    </div>
+                </div>
+            </div>
+             <!-- --------------------------------------------instagram--------------------------- -->
+            <div id="insta" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/insta.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Instagram Post</h5>
+                        <p class="card-text">Automate Instagram photo posting with Python using the instabot/instagrapi library. It allows you to upload photos directly to your feed with minimal setup.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instaModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------------------------------------facecrop------------------------- -->
+            <div id="facecrop" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/facedetection.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Upload Image for Face Detection</h5>
+                        <p class="card-text">Face detection identifies and locates human faces within images or video streams. Python libraries like OpenCV, Dlib, and MediaPipe offer powerful tools for this task.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#facecropModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- --------------------------------imagefilter-------------------------  -->
+            <div id="imagefilter" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/filterimage.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Image Filter Application</h5>
+                        <p class="card-text">Filtering image colors in Python allows you to modify or isolate specific hues in an image. Libraries like OpenCV and PIL (Pillow) enable you to apply color filters.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#imagefilterModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+<!-- ---------------------------------texttospeak-------------------------   -->
+            <div id="texttospeak" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/texttospeak.png" class="card-img-top" alt="Text to Speak">
+                    <div class="card-body">
+                        <h5 class="card-title">Text to Speak</h5>
+                        <p class="card-text">Text-to-speech (TTS) in Python can convert written text into spoken words using libraries like gTTS (Google Text-to-Speech) or pyttsx3. .</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#texttospeakModal">
+                            Run Demo
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+
+          <!-- ----------------------------swipface------------------------- -->
+            <div id="swipimage" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/faceswap.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Swap face on a image </h5>
+                        <p class="card-text">
+                            Face swapping in Python involves detecting faces with libraries like OpenCV and dlib, then replacing one face with another while ensuring a natural blend.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#swipimageModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+          
+         <!-- -------------------------------accessory set-------------------------  -->
+            <div id="sunglassSet" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/sunglass.png" class="card-img-top" alt="Text to Speak">
+                    <div class="card-body">
+            <button class="btn btn-primary" type="button"  id="start-camera-button">Start Camera</button>
+            <div id="video-container">
+                <video id="video" autoplay></video>
+                <canvas id="canvas"></canvas>
+            </div>
+                <button type="button" class="btn btn-primary" id="capture-button">Capture</button>
+                <button type="button" class="btn btn-primary" id="apply-accessory-button">Apply Accessory</button>
+                <button type="button" class="btn btn-primary" id="save-button">Save</button>
+                <select id="accessory-select">
+                    <option value="hat">Hat</option>
+                    <option value="sunglasses">Sunglasses</option>
+                </select>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- ---------------------------------whatsapp message------------------------- -->
+            <div id="WhatsappMsg" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/whatsapimage.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Whatsapp</h5>
+                        <p class="card-text">You can send messages on WhatsApp using Python with libraries like pywhatkit or the Twilio API. These tools allow you to automate message sending by specifying the recipient and content.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#WhatsappMsgModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+           <!-- -----------------------------------custom img--------------------------- -->
+            <div id="CustomImg" class="col-md-3 mx-4 my-4 section-content" style="float: left;">
+
+                <div class="card" style="width: 25rem;">
+                    <img src="/static/images/customimage.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Custom Img</h5>
+                        <p class="card-text"> You can create a custom image using NumPy arrays by defining pixel values in an array and then saving it with libraries like OpenCV or PIL. This method allows for precise control over image content .</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CustomImgModal">
+                            Run Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- -----------------------------Modal------------------------- -->
+
+    <!-- ------------------------Call Someone------------------------- -->
+    <div class="modal fade" id="callModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Call Form</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="http://127.0.0.1:5000/call" method="post">
+                        <div class="form-group">
+                            <label for="number">Recipient Number</label>
+                            <input type="text" class="form-control" id="number" name="number" placeholder="+1234567890"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="from_number">Your Twilio Number</label>
+                            <input type="text" class="form-control" id="from_number" name="from_number"
+                                placeholder="+0987654321" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="delay_minutes">Delay (in minutes, optional)</label>
+                            <input type="number" class="form-control" id="delay_minutes" name="delay_minutes"
+                                placeholder="Enter delay in minutes">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Make Call/Schedule</button>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------------------sms------------------------- -->
+
+    <div class="modal fade" id="SmsModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Sms</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form id="smsForm">
+                        <div class="form-group">
+                            <label for="number">Phone Number (with country code):</label>
+                            <input type="text" id="number" name="number" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="delay_minutes">Delay (in minutes, optional):</label>
+                            <input type="number" class="form-control" id="delay_minutes" name="delay_minutes"
+                                placeholder="Enter delay in minutes (leave empty for immediate)" min="0">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="sendSMS()">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------Google top5---------------------- -->
+    <div class="modal fade" id="GoogleTop5Modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Google Top 5</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="searchForm">
+                        <div class="form-group">
+                            <label for="query">Search Query:</label>
+                            <input type="text" id="query" name="query" class="form-control" required
+                                placeholder="Enter search query...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                    <div id="searchResults" class="mt-3"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- ---------------------------bing------------------------ -->
+
+    <div class="modal fade" id="BingModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Bing</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="http://127.0.0.1:5000/search/bing" method="post">
+                        <div class="form-group">
+                            <label for="bing_query">Search Query:</label>
+                            <input type="text" id="bing_query" name="query" class="form-control" required
+                                placeholder="Enter search query...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------------------------google query--------------------- -->
+    <div class="modal fade" id="SearchGoogleModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Bing</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="http://127.0.0.1:5000/search/google" method="post">
+                        <div class="form-group">
+                            <label for="goog_query">Search Query:</label>
+                            <input type="text" id="goog_query" name="query" class="form-control" required
+                                placeholder="Enter search query...">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------photo capture----------------- -->
+    <div class="modal fade" id="CapturePhotoModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Photo Capture</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form id="captureForm">
+                        <div class="form-group">
+                            <label for="camera_ip">IP Camera Address:</label>
+                            <input type="text" id="camera_ip" name="ip" class="form-control" required
+                                placeholder="Enter IP address">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="capturePhoto()">Capture
+                            Photo</button>
+                    </form>
+                    <div id="capturedImage" class="mt-3">
+                        <img id="photo" src="" alt="Captured Photo" style="display:none;">
+                    </div>
+                    <div id="result" class="mt-3"></div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------email---------------------------- -->
+
+
+    <div class="modal fade" id="EmailModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Email</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form id="emailForm">
+                        <div class="form-group">
+                            <label for="to_email">Recipient Email</label>
+                            <input type="email" class="form-control" id="to_email" name="to_email"
+                                placeholder="Enter recipient's email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject"
+                                placeholder="Enter subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="body">Body</label>
+                            <textarea class="form-control" id="body" name="body" rows="4" placeholder="Enter email body"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="delay_seconds">Delay (Seconds)</label>
+                            <input type="number" class="form-control" id="delay_seconds" name="delay_seconds"
+                                placeholder="Enter delay in seconds" min="0" value="0">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="sendEmail()">Send Email</button>
+                    </form>
+                    <div id="result" class="mt-3"></div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------opencv2------------------------- -->
+    <div class="modal fade" id="ec2Modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">EC2 Instance Management </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="http://127.0.0.1:5000/ec2" method="POST">
+                        <div class="form-group">
+                            <label for="aws_access_key_id">AWS Access Key ID</label>
+                            <input type="text" class="form-control" id="aws_access_key_id" name="aws_access_key_id"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="aws_secret_access_key">AWS Secret Access Key</label>
+                            <input type="text" class="form-control" id="aws_secret_access_key"
+                                name="aws_secret_access_key" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="region">Region</label>
+                            <input type="text" class="form-control" id="region" name="region" value="ap-south-1"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="instance_type">Instance Type</label>
+                            <input type="text" class="form-control" id="instance_type" name="instance_type"
+                                value="t2.micro" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image_id">Image ID</label>
+                            <input type="text" class="form-control" id="image_id" name="image_id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="max_count">Max Count</label>
+                            <input type="number" class="form-control" id="max_count" name="max_count" min="1" value="1"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="min_count">Min Count</label>
+                            <input type="number" class="form-control" id="min_count" name="min_count" min="1" value="1"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Instance</button>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ------------------------instagram post----------------------- -->
+    <div class="modal fade" id="instaModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="card-title">upload instagram post</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="http://127.0.0.1:5000/insta" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label for="photo">Upload Photo</label>
+                            <input type="file" class="form-control-file" id="photo" name="photo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="caption">Caption</label>
+                            <input type="text" class="form-control" id="caption" name="caption"
+                                placeholder="Enter caption">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Post to Instagram</button>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------------face crop----------------------- -->
+    <div class="modal fade" id="facecropModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="card-title">Upload Image for Face Detection</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form id="upload-form" action="http://127.0.0.1:5000/upload" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="file">Select an image:</label>
+                            <input type="file" class="form-control" id="file" name="file" accept="image/*" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </form>
+                    <div id="result" class="mt-5" style="display:none;">
+                        <h2>Processed Image</h2>
+                        <img id="output-image" class="img-fluid" src="#" alt="Processed Image">
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -----------------------------------image filter------------------------- -->
+
+    <div class="modal fade" id="imagefilterModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="card-title">Image Filter Application</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form action="http://127.0.0.1:5000/uploadfilter" method="post" enctype="multipart/form-data" class="mb-4">
+                        <div class="form-group">
+                            <label for="file">Select Image:</label>
+                            <input type="file" id="file" name="file" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="filter_color">Select Filter Color:</label>
+                            <select id="filter_color" name="filter_color" class="form-control" required>
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="blue">Blue</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload and Apply Filter</button>
+                    </form>
+
+                    <form action="http://127.0.0.1:5000/capture" method="post" class="mb-4">
+                        <div class="form-group">
+                            <label for="filter_color_capture">Select Filter Color:</label>
+                            <select id="filter_color_capture" name="filter_color" class="form-control" required>
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="blue">Blue</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Capture and Apply Filter</button>
+                    </form>
+
+                    <h3>Result:</h3>
+                    <img id="result" src="" alt="Filtered Image" class="img-fluid">
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------text to speak------------------- -->
+
+    <div class="modal fade" id="texttospeakModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="card-title">Text to SpeakModal Application</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form id="speakForm">
+                        <div class="form-group">
+                            <label for="text">Enter text:</label>
+                            <input type="text" id="text" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Speak</button>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ---------------------------------------swap image------------------------- -->
+    <div class="modal fade" id="swipimageModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="card-title">Image Swip Application</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+    
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form id="uploadForm">
+                        <input type="file" name="image1" id="image1" accept="image/*" required>
+                        <input type="file" name="image2" id="image2" accept="image/*" required>
+                        <button type="submit">Swap Faces</button>
+                    </form>
+                    <div id="result">
+                        <img id="outputImage" src="" alt="Swapped Faces">
+                    </div>
+    
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+        <!-- --------------------------------Whatsapp Message---------------------------  -->
+        <div class="modal fade" id="WhatsappMsgModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Whatsapp</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+    
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form action="http://127.0.0.1:5000/send" method="POST">
+                            <div class="form-group">
+                                <label for="number">Phone Number (with country code):</label>
+                                <input type="text" class="form-control" id="number" name="number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                
+                    </div>
+    
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- ------------------------------custom image------------------------- -->
+        <div class="modal fade" id="CustomImgModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Custom Img </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+    
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form action="http://127.0.0.1:5000/" method="post">
+                            <label for="width">Width:</label>
+                            <input type="number" id="width" name="width" required><br>
+                    
+                            <label for="height">Height:</label>
+                            <input type="number" id="height" name="height" required><br>
+                    
+                            <label for="shape">Shape:</label>
+                            <input type="text" id="shape" name="shape" placeholder="rectangle/line/circle" required><br>
+                    
+                            <label for="start_x">Start X:</label>
+                            <input type="number" id="start_x" name="start_x" required><br>
+                    
+                            <label for="start_y">Start Y:</label>
+                            <input type="number" id="start_y" name="start_y" required><br>
+                    
+                            <label for="end_x">End X:</label>
+                            <input type="number" id="end_x" name="end_x" required><br>
+                    
+                            <label for="end_y">End Y:</label>
+                            <input type="number" id="end_y" name="end_y" required><br>
+                    
+                            <label for="color_b">Blue:</label>
+                            <input type="number" id="color_b" name="color_b" min="0" max="255" required><br>
+                    
+                            <label for="color_g">Green:</label>
+                            <input type="number" id="color_g" name="color_g" min="0" max="255" required><br>
+                    
+                            <label for="color_r">Red:</label>
+                            <input type="number" id="color_r" name="color_r" min="0" max="255" required><br>
+                    
+                            <div id="line-options" style="display: none;">
+                                <label for="thickness">Line Thickness:</label>
+                                <input type="number" id="thickness" name="thickness"><br>
+                            </div>
+                    
+                            <div id="circle-options" style="display: none;">
+                                <label for="radius">Circle Radius:</label>
+                                <input type="number" id="radius" name="radius"><br>
+                            </div>
+                    
+                            <button type="submit">Generate Image</button>
+                        </form>
+                    
+                
+                    </div>
+    
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+
+        <!-- JS Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+        <script src="/static/js/index.js"></script>
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    </div>
+</body>
+
+</html>

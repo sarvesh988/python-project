@@ -1,0 +1,318 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+video {
+    width: 40%;
+    max-width: 200px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+h4 {
+font-size: 1.5rem;
+margin-bottom: 20px;
+color: #007bff;
+}
+
+#video-container {
+display: none;
+margin-top: 20px;
+text-align: center;
+}
+
+#video, #canvas {
+width: 100%;
+max-width: 100%;
+height: auto;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+margin-bottom: 10px;
+}
+
+
+select {
+width: 100%;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #ced4da;
+font-size: 1rem;
+}
+
+.select-container {
+margin-top: 10px;
+text-align: center;
+}
+
+.dropdown {
+margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+.section-content {
+margin-left: 0;
+margin-right: 0;
+}
+}
+.status,
+.details {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.col-md-3 {
+    display: none;
+}
+
+.card {
+    width: 25rem;
+}
+
+.btn-primary {
+    background-color: black;
+    border-color: black;
+}
+
+.btn-primary.active,
+.btn-primary:focus,
+.btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+
+/* Swipe animation */
+.section-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(-100%);
+}
+
+.section-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section-content.exiting {
+    opacity: 0;
+    transform: translateX(100%);
+}
+img {
+    width: 100%;
+    height: 200px;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: #ced4da;
+}
+
+
+.navbar a {
+    color: #ffffff;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border-color: #ffffff;
+}
+
+/* Buttons */
+button, select {
+    margin-top: 10px;
+    }
+    
+    button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+    
+    button:hover {
+    background-color: #0056b3;
+    }
+    
+    button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    }
+    
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    background-color: #ffffff;
+}
+
+/* Forms */
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 4px;
+    border-color: #ced4da;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Container */
+.container-fluid {
+    padding: 20px;
+}
+
+#ContainerBtn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 242px;
+}
+
+.nav-link {
+    color: black;
+}
+
+/* Add these styles to your existing CSS */
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+.fade-out {
+    animation: slideOut 0.5s ease-in;
+}
+
+.transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Add these styles to your existing CSS */
+
+#CapturePhoto {
+    display: block;
+}
+
+#capturedImage img {
+    max-width: 100%;
+    display: block;
+}
+
+
+.signature {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+    font-family: 'Segoe Script', cursive;
+}
+
+.angle {
+    font-size: 28px;
+    color: #333;
+}
+
+.float-left {
+    float: left;
+    margin-right: 10px; 
+}
+.swipe-in {
+    animation: swipeIn 0.5s ease-in-out;
+}
+
+@keyframes swipeIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
